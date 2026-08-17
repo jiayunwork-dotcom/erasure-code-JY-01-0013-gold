@@ -139,7 +139,7 @@ func MulSlice(k byte, src, dst []byte) {
 		return
 	}
 	for i := range src {
-		dst[i] = Mul(k, src[i])
+		dst[i] ^= Mul(k, src[i])
 	}
 }
 
